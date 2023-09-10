@@ -1,4 +1,14 @@
-﻿int ArrayCount(string[] array)
+﻿void ShowArray(string[] newArray)
+{
+    Console.Write("[");
+    for (int i = 0; i < newArray.Length-1; i++)
+    {
+        Console.Write($"{newArray[i]}, ");
+    }
+    Console.Write($"{newArray[newArray.Length-1]}]");
+}
+
+int ArrayCount(string[] array)
 {
     int letterCount = 0;
     int newArrayCount = 0;
@@ -25,3 +35,5 @@ for (int i = 0; i < array.Length; i++)
         newArrayCount++;
     }
 }
+
+ShowArray(newArray);
